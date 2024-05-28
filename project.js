@@ -10,11 +10,13 @@ function mintNFT(item, owner, year) {
 }
 
 function listNFTs() {
-    for (var i = 0; i < nfts.length; i++) {
-        console.log("NFT ID :" + (i+1));
-        console.log("Resource :" + nfts[i].resource);
-        console.log("Owner :" + nfts[i].owner);
-        console.log("Year :" + nfts[i].year + "\n");
+    var t=0;
+    for (var i of nfts) {
+        console.log("NFT ID :" + (t+1));
+        console.log("Resource :" + i.resource);
+        console.log("Owner :" + i.owner);
+        console.log("Year :" + i.year + "\n");
+        t++;
     }
 }
 
